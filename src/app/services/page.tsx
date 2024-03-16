@@ -5,15 +5,15 @@ import { TracingBeamDemo } from "../Components/Time_Line";
 function page() {
   return (
     <>
-    
-    <div className="">
-      <LampDemo />
-    </div>
+      <div className="">
+        <LampDemo />
+      </div>
 
-    <div>
-      <TracingBeamDemo/>
-    </div>
-    
+      <div>
+        <TracingBeamDemo />
+      </div>
+
+      <div className="w-[740px] h-[0px] border border-white border-opacity-50"></div>
     </>
   );
 }

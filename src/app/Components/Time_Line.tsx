@@ -7,23 +7,18 @@ import Plan from "./ui/Plan";
 import Schedule from "./ui/Schedule";
 import Visit from "./ui/visit";
 
-
 export function TracingBeamDemo() {
   return (
-    <TracingBeam className="px-6">
+    <TracingBeam className="px-6 ">
       <div className="max-w-2xl mx-auto antialiased pt-4 relative">
         {dummyContent.map((item, index) => (
-          <div key={`content-${index}`} className="mb-10">
-            <h2 className="bg-black text-white rounded-full text-sm w-fit px-4 py-1 mb-4">
-              {item.badge}
-            </h2>
+          <div key={`content-${index}`} className="mb-10 flex flex-row-reverse">
+            <h2 className="bg-transparent text-white rounded-full text-sm w-fit px-4 py-1 mb-4"></h2>
 
             <p className={twMerge("text-xl mb-4")}>{item.title}</p>
 
             <div className="text-sm  prose prose-sm dark:prose-invert">
-              {item?.svg && (
-                item.svg
-              )}
+              {item?.svg && item.svg}
               {item.description}
             </div>
           </div>
@@ -49,50 +44,38 @@ const dummyContent = [
         </p>
       </>
     ),
-    badge: "React",
-    svg: <Plan/>,
+    svg: <Plan />,
   },
   {
     title: "Lorem Ipsum Dolor Sit Amet",
     description: (
       <>
+        <p>Smart Home Planning with Floor Plans.</p>
+        <button className="shadow-[0_0_0_3px_#000000_inset] px-6 py-2 bg-transparent border border-black dark:border-white dark:text-white text-black rounded-lg font-bold transform hover:-translate-y-1 transition duration-400 mr-16">
+          {string_val} Connect 🤝
+        </button>
         <p>
-          Ex irure dolore veniam ex velit non aute nisi labore ipsum occaecat
-          deserunt cupidatat aute. Enim cillum dolor et nulla sunt exercitation
-          non voluptate qui aliquip esse tempor. Ullamco ut sunt consectetur
-          sint qui qui do do qui do. Labore laborum culpa magna reprehenderit ea
-          velit id esse adipisicing deserunt amet dolore. Ipsum occaecat veniam
-          commodo proident aliqua id ad deserunt dolor aliquip duis veniam sunt.
-        </p>
-        <p>
-          In dolore veniam excepteur eu est et sunt velit. Ipsum sint esse
-          veniam fugiat esse qui sint ad sunt reprehenderit do qui proident
-          reprehenderit. Laborum exercitation aliqua reprehenderit ea sint
-          cillum ut mollit.
+          Get a tailor-made quote for your smart home transformation. Provide
+          your electrical floor plan for personalized recommendations.
         </p>
       </>
     ),
-    badge: "Changelog",
-    svg: <Schedule/>
+    svg: <Schedule />,
   },
   {
     title: "Lorem Ipsum Dolor Sit Amet",
     description: (
       <>
+        <p>Smart Home Planning with Floor Plans.</p>
+        <button className="shadow-[0_0_0_3px_#000000_inset] px-6 py-2 bg-transparent border border-black dark:border-white dark:text-white text-black rounded-lg font-bold transform hover:-translate-y-1 transition duration-400 mr-16">
+          {string_val} Connect 🤝
+        </button>
         <p>
-          Ex irure dolore veniam ex velit non aute nisi labore ipsum occaecat
-          deserunt cupidatat aute. Enim cillum dolor et nulla sunt exercitation
-          non voluptate qui aliquip esse tempor. Ullamco ut sunt consectetur
-          sint qui qui do do qui do. Labore laborum culpa magna reprehenderit ea
-          velit id esse adipisicing deserunt amet dolore. Ipsum occaecat veniam
-          commodo proident aliqua id ad deserunt dolor aliquip duis veniam sunt.
+          Get a tailor-made quote for your smart home transformation. Provide
+          your electrical floor plan for personalized recommendations.
         </p>
       </>
     ),
-    badge: "Launch Week",
-    svg: <Visit/>
+    svg: <Visit />,
   },
 ];
-
-
-
