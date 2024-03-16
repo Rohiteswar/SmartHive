@@ -3,6 +3,9 @@ import React from "react";
 import Image from "next/image";
 import { twMerge } from "tailwind-merge";
 import { TracingBeam } from "../Components/ui/tracing beam";
+import Plan from "./ui/Plan";
+import Schedule from "./ui/Schedule";
+import Visit from "./ui/visit";
 
 
 export function TracingBeamDemo() {
@@ -15,19 +18,11 @@ export function TracingBeamDemo() {
               {item.badge}
             </h2>
 
-            <p className={twMerge( "text-xl mb-4")}>
-              {item.title}
-            </p>
+            <p className={twMerge("text-xl mb-4")}>{item.title}</p>
 
             <div className="text-sm  prose prose-sm dark:prose-invert">
-              {item?.image && (
-                <Image
-                  src={item.image}
-                  alt="blog thumbnail"
-                  height="1000"
-                  width="1000"
-                  className="rounded-lg mb-10 object-cover"
-                />
+              {item?.svg && (
+                item.svg
               )}
               {item.description}
             </div>
@@ -38,26 +33,24 @@ export function TracingBeamDemo() {
   );
 }
 
-const string_val = "Let's"
+const string_val = "Let's";
 const dummyContent = [
   {
     title: "Personalized Plan",
     description: (
       <>
-        <p>
-        Smart Home Planning with Floor Plans.
-        </p>
+        <p>Smart Home Planning with Floor Plans.</p>
         <button className="shadow-[0_0_0_3px_#000000_inset] px-6 py-2 bg-transparent border border-black dark:border-white dark:text-white text-black rounded-lg font-bold transform hover:-translate-y-1 transition duration-400 mr-16">
           {string_val} Connect 🤝
         </button>
         <p>
-        Get a tailor-made quote for your smart home transformation. Provide your electrical floor plan for personalized recommendations.
+          Get a tailor-made quote for your smart home transformation. Provide
+          your electrical floor plan for personalized recommendations.
         </p>
       </>
     ),
     badge: "React",
-    image:
-      "/public/Plan.jpg",
+    svg: <Plan/>,
   },
   {
     title: "Lorem Ipsum Dolor Sit Amet",
@@ -80,8 +73,7 @@ const dummyContent = [
       </>
     ),
     badge: "Changelog",
-    image:
-      "/public/Schedule.jpg",
+    svg: <Schedule/>
   },
   {
     title: "Lorem Ipsum Dolor Sit Amet",
@@ -98,7 +90,9 @@ const dummyContent = [
       </>
     ),
     badge: "Launch Week",
-    image:
-      "/public/Visit.jpg",
+    svg: <Visit/>
   },
 ];
+
+
+
